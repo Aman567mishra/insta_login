@@ -1,0 +1,138 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #fafafa;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-box {
+    background-color: white;
+    border: 1px solid #dbdbdb;
+    padding: 40px 20px;
+    text-align: center;
+    width: 350px;
+    margin-bottom: 10px;
+}
+
+.logo {
+    background-image: url("https://static.cdninstagram.com/rsrc.php/v3/yM/r/8n91YnfPq0s.png");
+    background-position: 0px -52px;
+    background-size: auto;
+    width: 175px;
+    height: 51px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin: 0 auto 20px auto;
+}
+
+.input-box {
+    margin-bottom: 10px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    background: #fafafa;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #3897f0;
+    border: none;
+    color: white;
+    border-radius: 3px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2878c1;
+}
+
+.or {
+    display: flex;
+    align-items: center;
+    color: #8e8e8e;
+    margin: 10px 0;
+}
+
+.line {
+    flex: 1;
+    height: 1px;
+    background: #dbdbdb;
+}
+
+.text {
+    margin: 0 18px;
+}
+
+.facebook-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #385185;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.facebook-login img {
+    width: 20px;
+    margin-right: 8px;
+}
+
+.forgot-password {
+    display: block;
+    margin-top: 15px;
+    color: #00376b;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.get-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.get-app span {
+    margin-bottom: 10px;
+    color: #8e8e8e;
+    font-weight: bold;
+}
+
+.app-links {
+    display: flex;
+    gap: 10px;
+}
+
+.app-links a img {
+    width: 135px;
+}
+
+.signup-box {
+    background-color: white;
+    border: 1px solid #dbdbdb;
+    padding: 20px;
+    text-align: center;
+    width: 350px;
+}
+
+.signup-box a {
+    color: #3897f0;
+    text-decoration: none;
+}
